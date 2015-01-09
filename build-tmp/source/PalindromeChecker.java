@@ -37,27 +37,9 @@ public boolean palindrome(String word)
   String tempString = "";
   for(int i = 0; i < word.length(); i++)
   {
-  	if(word.charAt(i) != ' ' )
+  	if(Character.isLetter(word.charAt(i)) == true)
   	{
-  		if(word.charAt(i) != '.' )
-  		{
-  			if(word.charAt(i) != '?' )
-  			{
-  				if(word.charAt(i) != '!')
-  				{
-  					if(word.charAt(i) != ',')
-  					{
-  						if(word.charAt(i) != '\"')
-  						{
-  							if(word.charAt(i) != '\'')
-  							{
-  								tempString = tempString + word.charAt(i);
-  							}
-  						}
-  					}
-  				}
-  			}
-  		}
+  		tempString = tempString + word.charAt(i);
   	}
   }
   for(int i = 0; i < tempString.length(); i++)

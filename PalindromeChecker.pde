@@ -21,35 +21,11 @@ public boolean palindrome(String word)
   String tempString = "";
   for(int i = 0; i < word.length(); i++)
   {
-  	if(word.charAt(i) != ' ' )
-  	{
-  		if(word.charAt(i) != '.' )
-  		{
-  			if(word.charAt(i) != '?' )
-  			{
-  				if(word.charAt(i) != '!')
-  				{
-  					if(word.charAt(i) != ',')
-  					{
-  						if(word.charAt(i) != '\"')
-  						{
-  							if(word.charAt(i) != '\'')
-  							{
-  								tempString = tempString + word.charAt(i);
-  							}
-  						}
-  					}
-  				}
-  			}
-  		}
-  	}
+  	if(Character.isLetter(word.charAt(i)) == true) {tempString = tempString + word.charAt(i);}
   }
   for(int i = 0; i < tempString.length(); i++)
   {
-  	if(tempString.charAt(i) != tempString.charAt(tempString.length()-i-1))
-  	{
-  		return false;
-  	}
+  	if(tempString.charAt(i) != tempString.charAt(tempString.length()-i-1)) {return false;}
   }
   return true;
 }
